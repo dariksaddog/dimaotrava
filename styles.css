@@ -1,0 +1,251 @@
+body {
+	font-family: 'Prompt', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.homescreane header {
+	color: hsl(0, 0%, 0%);
+	padding: 20px;
+	padding-top: 150px;
+	padding-bottom: 75px;
+	text-align: center;
+}
+.portfolioscrean header {
+	color: hsl(0, 0%, 0%);
+	padding: 20px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+h1 {
+	font-family: 'Special Elite', system-ui;
+}
+a {
+	color: black;
+	text-decoration: none;
+	padding: 10px;
+}
+.portfolio-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 150px;
+}
+
+.portfolio-item {
+	width: 600px;
+	margin: auto;
+	/* border: 1px solid #ddd; */
+	border-radius: 5px;
+	padding: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: left;
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px rgba(233, 233, 233, 0.1);
+	position: static;
+	bottom: 0;
+	right: 0;
+}
+
+.portfolio-item img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+.portfolio-item h3 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+	text-transform: lowercase;
+	font-weight: 900;
+	font-style: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.portfolio-item p {
+	font-family: 'Raleway', sans-serif;
+	text-transform: lowercase;
+	font-weight: 500;
+	font-style: normal;
+	text-align: justify;
+}
+
+.portfolio-item a {
+	text-decoration: none;
+	color: #007bff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	padding-left: 0;
+}
+.homescreane {
+	box-sizing: content-box;
+	display: inline-block;
+	width: 90vw;
+	height: 90vh;
+	margin: 20px;
+	margin-bottom: 40px;
+	padding: 20px;
+	position: relative;
+}
+.portfolioscrean {
+	position: sticky;
+	left: auto;
+	right: auto;
+	top: 0;
+	bottom: auto;
+	box-sizing: content-box;
+	display: inline-block;
+	width: 90vw;
+	height: 30px;
+	margin: 20px;
+	padding: 20px;
+	background-color: white;
+	z-index: 999;
+}
+.navigation_home {
+	padding: 25px;
+	margin: 25px;
+	margin-top: 60vh;
+	display: flex;
+	background-color: rgb(255, 255, 255);
+	font-family: 'Prompt', sans-serif;
+	font-size: 16px;
+	position: relative;
+	min-width: 350px;
+}
+.navigation_second {
+	padding: 10px;
+	display: flex;
+	background-color: hwb(0 100% 0% / 0);
+	font-family: 'Prompt', sans-serif;
+	font-size: 16px;
+	position: relative;
+	min-width: 350px;
+}
+.bottom_left {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.bottom_right {
+	position: absolute;
+	font-weight: bold;
+	bottom: 0;
+	right: 0;
+}
+.h1_second {
+	font-size: large;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 15px;
+	bottom: 0;
+}
+footer {
+	background-color: #000; /* Черный фон */
+	color: #fff; /* Белый текст */
+	padding: 20px 0;
+	text-align: center;
+	width: 100%; /* Полная ширина */
+}
+.footer-content {
+	padding: 0 20px; /* Отступы по бокам */
+	font-family: 'Prompt', sans-serif;
+}
+.footer-content p {
+	margin: 0;
+	font-size: 0.9em;
+}
+.bottom_left a:hover {
+	text-decoration: underline;
+}
+.bottom_right a:hover {
+	text-decoration: underline;
+}
+.stuff {
+	position: relative;
+	margin-top: 100px;
+	margin-bottom: 200px;
+}
+.gallery-container {
+	display: flex;
+	gap: 20px;
+	padding-bottom: 150px;
+}
+
+.gallery-container img {
+	width: 450px; /* Задаем ширину для каждой картинки */
+	height: auto;
+	border-radius: 5px;
+}
+.product-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.product-card {
+	background-color: #fff;
+	border-radius: 8px;
+	overflow: hidden;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.product-card img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+.product-card h2 {
+	font-size: 1.2em;
+	margin-top: 10px 0;
+	text-align: left;
+	font-family: 'Prompt', sans-serif;
+}
+
+.product-card .price-size {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+	font-family: 'Prompt', sans-serif;
+	color: hwb(0 22% 78%);
+}
+
+.sold-out-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.514);
+	color: rgb(255, 255, 255);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3em;
+	font-weight: bold;
+	/*text-transform: uppercase;*/
+	border-radius: 8px;
+	font-family: 'Fleur De Leah', cursive;
+}
+.portfolio-gallery {
+	margin-top: 50px;
+	margin-bottom: 150px;
+}
