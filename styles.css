@@ -1,68 +1,3 @@
-@media (max-width: 768px) {
-	body {
-		padding: 10px;
-	}
-
-	.homescreane,
-	.portfolioscrean {
-		width: 100%;
-		padding: 10px;
-		margin: 10px 0;
-	}
-
-	.portfolio-container,
-	.product-gallery,
-	.gallery-container {
-		grid-template-columns: 1fr; /* Одноколоночная сетка */
-		gap: 15px;
-		max-width: 100%;
-		padding: 10px;
-	}
-
-	.portfolio-item,
-	.product-card {
-		width: 100%; /* Полная ширина карточек */
-		margin: 0;
-		padding: 15px;
-	}
-
-	.portfolio-item h3,
-	.product-card h2 {
-		font-size: 1.2em;
-	}
-
-	.portfolio-item p,
-	.product-card .price-size {
-		font-size: 1em;
-		text-align: center;
-	}
-
-	.portfolio-item img,
-	.product-card img,
-	.gallery-container img {
-		width: 100%;
-		height: auto;
-	}
-
-	.navigation_home,
-	.navigation_second {
-		font-size: 14px;
-		padding: 15px;
-		margin: 10px;
-		min-width: auto;
-	}
-
-	.footer-content,
-	footer {
-		padding: 15px;
-		font-size: 0.8em;
-	}
-
-	.sold-out-overlay {
-		font-size: 1.5em;
-	}
-}
-
 body {
 	font-family: 'Prompt', sans-serif;
 	margin: 0;
@@ -175,7 +110,7 @@ a {
 	height: 30px;
 	margin: 20px;
 	padding: 20px;
-	background-color: white;
+	background-color: hsl(0, 0%, 100%);
 	z-index: 999;
 }
 .navigation_home {
@@ -183,31 +118,32 @@ a {
 	margin: 25px;
 	margin-top: 60vh;
 	display: flex;
-	background-color: rgb(255, 255, 255);
+	background-color: hsl(0, 0%, 100%);
 	font-family: 'Prompt', sans-serif;
 	font-size: 16px;
 	position: relative;
 	min-width: 350px;
 }
 .navigation_second {
+	position: absolute;
 	padding: 10px;
-	display: flex;
-	background-color: hwb(0 100% 0% / 0);
+	background-color: hsla(0, 0%, 100%, 0);
 	font-family: 'Prompt', sans-serif;
 	font-size: 16px;
 	position: relative;
 	min-width: 350px;
+	top: 0;
 }
 .bottom_left {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
 }
 .bottom_right {
 	position: absolute;
-	font-weight: bold;
-	bottom: 0;
+	top: 0;
 	right: 0;
+	font-weight: bold;
 }
 .h1_second {
 	font-size: large;
@@ -223,6 +159,8 @@ footer {
 	padding: 20px 0;
 	text-align: center;
 	width: 100%; /* Полная ширина */
+	bottom: 0;
+	top: auto;
 }
 .footer-content {
 	padding: 0 20px; /* Отступы по бокам */
@@ -313,4 +251,189 @@ footer {
 .portfolio-gallery {
 	margin-top: 50px;
 	margin-bottom: 150px;
+}
+/* Десктопная версия навигации */
+.navigation_home ul,
+.navigation_second ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.navigation_home ul li,
+.navigation_second ul li {
+	margin: 0 5px;
+}
+
+.navigation_home ul li a,
+.navigation_second ul li a {
+	text-decoration: none;
+	color: black;
+	font-family: 'Prompt', sans-serif;
+}
+
+/* Добавляем стиль для символа "/" */
+.navigation_home ul li span,
+.navigation_second ul li span {
+	color: black;
+	margin: 0 5px;
+}
+
+/* Скрытие кнопки мобильного меню на десктопе */
+.mobile-menu-toggle {
+	display: none;
+}
+/* Мобильная версия */
+@media (max-width: 768px) {
+	/* Кнопка для открытия навигации на мобильных устройствах */
+	.mobile-menu-toggle {
+		display: inline-block;
+		position: absolute;
+		right: 30px;
+		top: 20px;
+		background: none;
+		border: none;
+		font-size: 24px;
+		cursor: pointer;
+		z-index: 1001;
+	}
+	.homescreane .mobile-menu-toggle {
+		top: 170px;
+	}
+	.product-gallery {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.bottom_right,
+	.bottom_left {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: auto;
+		margin-top: 50px;
+	}
+	.homescreane {
+		box-sizing: content-box;
+		display: inline-block;
+		position: relative;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Навигация на мобильной версии */
+	.navigation_home {
+		display: none; /* Скрываем по умолчанию */
+		position: fixed;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.95);
+		justify-content: center;
+		align-items: center;
+		z-index: 1000;
+	}
+
+	.navigation_home ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		margin-top: auto;
+		text-align: center;
+	}
+
+	.navigation_home ul li {
+		margin: 20px 0; /* Отступы между элементами */
+	}
+
+	.navigation_home ul li a {
+		text-decoration: none;
+		color: black;
+		font-family: 'Prompt', sans-serif;
+		font-size: 1.2em; /* Увеличенный текст */
+	}
+
+	/* Отображаем навигацию при активном классе */
+	.menu-active .navigation_home,
+	.menu-active .navigation_second {
+		display: flex; /* Показываем навигацию */
+		flex-direction: column;
+	}
+	.portfolioscrean {
+		box-sizing: content-box;
+		display: inline-block;
+		position: relative;
+		top: auto;
+		left: 0;
+	}
+	.navigation_second {
+		display: none; /* Скрываем по умолчанию */
+		position: fixed;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.95);
+		justify-content: center;
+		align-items: center;
+		z-index: 1000;
+	}
+	.navigation_second ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		margin-top: auto;
+		text-align: center;
+	}
+	.navigation_second ul li {
+		margin: 20px 0; /* Отступы между элементами */
+	}
+	.navigation_second ul li a {
+		text-decoration: none;
+		color: black;
+		font-family: 'Prompt', sans-serif;
+		font-size: 1.2em; /* Увеличенный текст */
+	}
+	footer {
+		bottom: 0;
+	}
+	.portfolio-container {
+		display: flex;
+		/* flex-wrap: wrap; */
+		gap: 20px;
+		padding: 20px;
+		max-width: 300px;
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 150px;
+	}
+	.portfolio-item img {
+		max-width: 300px;
+		height: auto;
+		border-radius: 5px;
+	}
+	.portfolio-item p,
+	h3,
+	a {
+		max-width: 300px;
+	}
+	.portfolio-gallery {
+		max-width: 300px;
+	}
+	.portfolio-item {
+		max-width: 300px;
+		width: auto;
+	}
+	.product-gallery {
+		max-width: 300px;
+	}
 }

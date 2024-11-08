@@ -22,22 +22,27 @@
 		<div class="homescreane">
 			<header>
 				<h1 class="h1_home">dima otrava</h1>
-				<div class="navigation_home">
-					<div class="bottom_left">
-						<a href="./index.html"><b>home</b></a>
-						/
-						<a href="./stuff.html">stuff</a>
-						/
-						<a href="./works.html">works</a>
-						/
-						<a href="./udel.html">udel</a>
-					</div>
-					<div class="bottom_right">
-						<a href="https://t.me/dimaotrava" class="bold" target="_blank"
-							>telegram</a
-						>
-					</div>
-				</div>
+				<nav class="navigation_home">
+					<ul class="bottom_left">
+						<li>
+							<a href="./index.html"><b>home</b></a>
+						</li>
+						<li><span>/</span></li>
+						<li><a href="./stuff.html">stuff</a></li>
+						<li><span>/</span></li>
+						<li><a href="./works.html">works</a></li>
+						<li><span>/</span></li>
+						<li><a href="./udel.html">udel</a></li>
+					</ul>
+					<ul class="bottom_right">
+						<li>
+							<a href="https://t.me/dimaotrava" class="bold" target="_blank"
+								>telegram</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<button class="mobile-menu-toggle">⋮</button>
 			</header>
 		</div>
 	</body>
@@ -46,4 +51,13 @@
 			<p>något är förlorat för alltid</p>
 		</div>
 	</footer>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const menuToggle = document.querySelector('.mobile-menu-toggle')
+
+			menuToggle.addEventListener('click', function () {
+				document.body.classList.toggle('menu-active') // Переключаем класс
+			})
+		})
+	</script>
 </html>

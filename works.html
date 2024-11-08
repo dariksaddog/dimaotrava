@@ -26,34 +26,50 @@
 		<div class="portfolioscrean">
 			<header>
 				<h1 class="h1_second">works</h1>
-				<div class="navigation_second">
-					<div class="bottom_left">
-						<a href="./index.html">home</a>
-						/
-						<a href="./stuff.html">stuff</a>
-						/
-						<a href="./works.html"><b>works</b></a>
-						/
-						<a href="./udel.html">udel</a>
-					</div>
-
-					<div class="bottom_right">
-						<a href="https://t.me/dimaotrava" class="bold" target="_blank"
-							>telegram</a
-						>
-					</div>
-				</div>
+				<nav class="navigation_second">
+					<ul class="bottom_left">
+						<li><a href="./index.html">home</a></li>
+						<li><span>/</span></li>
+						<li>
+							<a href="./stuff.html">stuff</a>
+						</li>
+						<li><span>/</span></li>
+						<li>
+							<a href="./works.html"><b>works</b></a>
+						</li>
+						<li><span>/</span></li>
+						<li><a href="./udel.html">udel</a></li>
+					</ul>
+					<ul class="bottom_right">
+						<li>
+							<a href="https://t.me/dimaotrava" class="bold" target="_blank"
+								>telegram</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<button class="mobile-menu-toggle">⋮</button>
 			</header>
 		</div>
+
+		<div id="portfolio" class="portfolio-container">
+			<!-- Портфолио-элементы будут добавлены здесь скриптом -->
+		</div>
+		<script src="works-script.js"></script>
+		<!-- Подключение JS -->
 	</body>
-	<div id="portfolio" class="portfolio-container">
-		<!-- Портфолио-элементы будут добавлены здесь скриптом -->
-	</div>
-	<script src="works-script.js"></script>
-	<!-- Подключение JS -->
 	<footer>
 		<div class="footer-content">
 			<p>något är förlorat för alltid</p>
 		</div>
 	</footer>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const menuToggle = document.querySelector('.mobile-menu-toggle')
+
+			menuToggle.addEventListener('click', function () {
+				document.body.classList.toggle('menu-active') // Переключаем класс
+			})
+		})
+	</script>
 </html>

@@ -21,7 +21,7 @@ function displayPortfolio(rows) {
             <img src="${imageUrl}" alt="${title}" onerror="this.style.display='none'">
             <h3>${title}</h3>
             <p>${description}</p>
-            <a href="${link}" target="_blank">@telegram</a>
+            <a href="${link}" target="_blank">@dimaotrava</a>
         `
 		portfolioContainer.appendChild(item)
 	})
