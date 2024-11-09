@@ -286,7 +286,7 @@ footer {
 	display: none;
 }
 /* Мобильная версия */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	/* Кнопка для открытия навигации на мобильных устройствах */
 	.mobile-menu-toggle {
 		display: inline-block;
@@ -368,9 +368,10 @@ footer {
 	.portfolioscrean {
 		box-sizing: content-box;
 		display: inline-block;
-		position: relative;
-		top: auto;
+		position: sticky;
+		top: 0;
 		left: 0;
+		/* до этого было position relative, top auto */
 	}
 	.navigation_second {
 		display: none; /* Скрываем по умолчанию */
@@ -411,21 +412,33 @@ footer {
 		/* flex-wrap: wrap; */
 		gap: 20px;
 		padding: 20px;
-		max-width: 300px;
+		max-width: 600px;
 		margin: 0 auto;
 		margin-top: 50px;
 		margin-bottom: 150px;
 	}
 	.portfolio-item img {
-		max-width: 300px;
+		max-width: 600px;
 		height: auto;
 		border-radius: 5px;
 	}
 	.portfolio-item p,
 	h3,
 	a {
-		max-width: 300px;
+		max-width: 600px;
 	}
+	.portfolio-gallery {
+		max-width: 600px;
+	}
+	.portfolio-item {
+		max-width: 600px;
+		width: auto;
+	}
+	.product-gallery {
+		max-width: 600px;
+	}
+}
+@media (max-width: 720px) {
 	.portfolio-gallery {
 		max-width: 300px;
 	}
@@ -435,5 +448,25 @@ footer {
 	}
 	.product-gallery {
 		max-width: 300px;
+	}
+	.portfolio-item p,
+	h3,
+	a {
+		max-width: 300px;
+	}
+	.portfolio-item img {
+		max-width: 300px;
+		height: auto;
+		border-radius: 5px;
+	}
+	.portfolio-container {
+		display: flex;
+		/* flex-wrap: wrap; */
+		gap: 20px;
+		padding: 20px;
+		max-width: 300px;
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 150px;
 	}
 }
